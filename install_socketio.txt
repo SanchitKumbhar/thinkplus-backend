@@ -1,0 +1,4 @@
+Run this command in backend directory to install socket.io:
+npm install socket.io
+
+This is required for real-time monitoring features.
