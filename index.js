@@ -28,14 +28,13 @@ const server = http.createServer(app);
 
 // ✅ CORS CONFIG (FIXED)
 const corsOptions = {
-  origin: "http://13.201.114.37", // frontend server
+  origin: "http://13.201.114.37",
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
 };
 
-// Apply CORS
-app.use(cors(corsOptions));
+app.use(cors(corsOptions)); // enough ✅
 
 // ✅ Handle preflight requests (VERY IMPORTANT)
 app.options("*", cors(corsOptions));
